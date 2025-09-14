@@ -14,7 +14,104 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      alerts: {
+        Row: {
+          created_at: string
+          id: string
+          latitude: number | null
+          location_name: string | null
+          longitude: number | null
+          message: string
+          severity: string
+          status: string
+          tourist_id: string
+          type: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          latitude?: number | null
+          location_name?: string | null
+          longitude?: number | null
+          message: string
+          severity?: string
+          status?: string
+          tourist_id: string
+          type: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          latitude?: number | null
+          location_name?: string | null
+          longitude?: number | null
+          message?: string
+          severity?: string
+          status?: string
+          tourist_id?: string
+          type?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "alerts_tourist_id_fkey"
+            columns: ["tourist_id"]
+            isOneToOne: false
+            referencedRelation: "tourists"
+            referencedColumns: ["tourist_id"]
+          },
+        ]
+      }
+      tourists: {
+        Row: {
+          created_at: string
+          emergency_contact: string
+          id: string
+          latitude: number | null
+          location_name: string | null
+          longitude: number | null
+          name: string
+          passport_number: string
+          status: string
+          tourist_id: string
+          trip_end: string
+          trip_start: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          emergency_contact: string
+          id?: string
+          latitude?: number | null
+          location_name?: string | null
+          longitude?: number | null
+          name: string
+          passport_number: string
+          status?: string
+          tourist_id: string
+          trip_end: string
+          trip_start: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          emergency_contact?: string
+          id?: string
+          latitude?: number | null
+          location_name?: string | null
+          longitude?: number | null
+          name?: string
+          passport_number?: string
+          status?: string
+          tourist_id?: string
+          trip_end?: string
+          trip_start?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

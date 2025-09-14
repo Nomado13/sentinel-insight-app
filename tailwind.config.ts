@@ -57,11 +57,48 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        /* Authority Dashboard Custom Colors */
+        authority: {
+          DEFAULT: "hsl(var(--authority-blue))",
+          dark: "hsl(var(--authority-blue-dark))",
+          light: "hsl(var(--authority-blue-light))",
+        },
+        alert: {
+          critical: "hsl(var(--alert-critical))",
+          "critical-bg": "hsl(var(--alert-critical-bg))",
+          warning: "hsl(var(--alert-warning))",
+          "warning-bg": "hsl(var(--alert-warning-bg))",
+          success: "hsl(var(--alert-success))",
+          "success-bg": "hsl(var(--alert-success-bg))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      /* Authority Dashboard Spacing */
+      spacing: {
+        'header': 'var(--header-height)',
+        'sidebar': 'var(--sidebar-width)',
+        'sidebar-collapsed': 'var(--sidebar-collapsed-width)',
+      },
+      /* Authority Dashboard Box Shadows */
+      boxShadow: {
+        'card': 'var(--shadow-card)',
+        'elevated': 'var(--shadow-elevated)',
+        'authority': 'var(--shadow-authority)',
+      },
+      /* Authority Dashboard Background Images */
+      backgroundImage: {
+        'gradient-authority': 'var(--gradient-authority)',
+        'gradient-card': 'var(--gradient-card)',
+        'gradient-alert': 'var(--gradient-alert)',
+      },
+      /* Authority Dashboard Transitions */
+      transitionTimingFunction: {
+        'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',
+        'bounce': 'cubic-bezier(0.68, -0.55, 0.265, 1.55)',
       },
       keyframes: {
         "accordion-down": {
